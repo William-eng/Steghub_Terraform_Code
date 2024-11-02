@@ -42,16 +42,16 @@ resource "aws_efs_file_system" "Ktrontech-efs" {
 # set first mount target for the EFS 
 resource "aws_efs_mount_target" "subnet-1" {
   file_system_id  = aws_efs_file_system.Ktrontech-efs.id
-  subnet_id       = aws_subnet.private[2].id
-  security_groups = [aws_security_group.datalayer-sg.id]
+  subnet_id       = var.efs-subnet-1
+  security_groups = var.efs-sg
 }
 
 
 # set second mount target for the EFS 
 resource "aws_efs_mount_target" "subnet-2" {
   file_system_id  = aws_efs_file_system.Ktrontech-efs.id
-  subnet_id       = aws_subnet.private[3].id
-  security_groups = [aws_security_group.datalayer-sg.id]
+  subnet_id       = var.efs-subnet-2
+  security_groups = var.efs-sg
 }
 
 
