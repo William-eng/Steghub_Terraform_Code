@@ -17,7 +17,7 @@ sudo mkdir -p /var/www/html/
 sudo cp -R /wordpress/* /var/www/html/
 cd /var/www/html/
 sudo touch healthstatus
-sed -i "s/localhost/citatech-db.c1wcugy04w3l.us-east-2.rds.amazonaws.com/g" wp-config.php 
+sed -i "s/localhost/KtrontechDB.c1wcugy04w3l.us-east-2.rds.amazonaws.com/g" wp-config.php 
 sed -i "s/username_here/Ktrontechdb/g" wp-config.php 
 sed -i "s/password_here/Willy211#/g" wp-config.php 
 sed -i "s/database_name_here/wordpressdb/g" wp-config.php 
