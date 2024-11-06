@@ -28,11 +28,6 @@ source "amazon-ebs" "terraform-web-prj-19" {
 # Specify the subnet_id here
   subnet_id = "subnet-043a399d5bfcff012"  # Replace with your actual subnet ID
 
-
-  source_ami_filter {
-    filters = {
-      name                = "RHEL-9.4.0_HVM-20240605-x86_64-82-Hourly2-GP3"
-      root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
     most_recent = true
