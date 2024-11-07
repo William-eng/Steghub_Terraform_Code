@@ -34,7 +34,7 @@ resource "random_shuffle" "az_list" {
 }
 
 
-# launch template for bastion
+# launch template for bastion.
 
 resource "aws_launch_template" "bastion-launch-template" {
   image_id               = var.ami-bastion
